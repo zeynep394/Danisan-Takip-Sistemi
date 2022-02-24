@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="diyettakipsisModelStoreContainer" CdmEntityContainer="diyettakipsisEntities">
+    <EntitySetMapping Name="Danisans">
+      <EntityTypeMapping TypeName="diyettakipsisModel.Danisan">
+        <MappingFragment StoreEntitySet="Danisan">
+          <ScalarProperty Name="danisan_id" ColumnName="danisan_id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Boy" ColumnName="Boy" />
+          <ScalarProperty Name="Kilo" ColumnName="Kilo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diyetisyens">
+      <EntityTypeMapping TypeName="diyettakipsisModel.Diyetisyen">
+        <MappingFragment StoreEntitySet="Diyetisyen">
+          <ScalarProperty Name="Diyetisyen_id" ColumnName="Diyetisyen_id" />
+          <ScalarProperty Name="diyetisyen_adSoyad" ColumnName="diyetisyen_adSoyad" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="diyetLists">
+      <EntityTypeMapping TypeName="diyettakipsisModel.diyetList">
+        <MappingFragment StoreEntitySet="diyetList">
+          <ScalarProperty Name="diyetListId" ColumnName="diyetListId" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Randevus">
+      <EntityTypeMapping TypeName="diyettakipsisModel.Randevu">
+        <MappingFragment StoreEntitySet="Randevu">
+          <ScalarProperty Name="Randevu_id" ColumnName="Randevu_id" />
+          <ScalarProperty Name="randevu_dabisanId" ColumnName="randevu_dabisanId" />
+          <ScalarProperty Name="randevu_tarih" ColumnName="randevu_tarih" />
+          <ScalarProperty Name="diyetisyenId" ColumnName="diyetisyenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

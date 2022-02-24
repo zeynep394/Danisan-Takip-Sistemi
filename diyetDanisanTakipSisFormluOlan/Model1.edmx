@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="diyettakipsisModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Danisan">
+          <Key>
+            <PropertyRef Name="danisan_id" />
+          </Key>
+          <Property Name="danisan_id" Type="int" Nullable="false" />
+          <Property Name="Ad" Type="nchar" MaxLength="50" />
+          <Property Name="DogumTarihi" Type="datetime" />
+          <Property Name="Cinsiyet" Type="bit" />
+          <Property Name="Telefon" Type="nchar" MaxLength="11" />
+          <Property Name="Boy" Type="float" />
+          <Property Name="Kilo" Type="float" />
+        </EntityType>
+        <EntityType Name="Diyetisyen">
+          <Key>
+            <PropertyRef Name="Diyetisyen_id" />
+          </Key>
+          <Property Name="Diyetisyen_id" Type="int" Nullable="false" />
+          <Property Name="diyetisyen_adSoyad" Type="nchar" MaxLength="100" />
+          <Property Name="password" Type="nchar" MaxLength="100" />
+          <Property Name="mail" Type="nchar" MaxLength="50" />
+          <Property Name="Telefon" Type="nchar" MaxLength="11" />
+          <Property Name="user_name" Type="nchar" MaxLength="50" />
+          <Property Name="Cinsiyet" Type="bit" />
+        </EntityType>
+        <EntityType Name="diyetList">
+          <Key>
+            <PropertyRef Name="diyetListId" />
+          </Key>
+          <Property Name="diyetListId" Type="int" Nullable="false" />
+          <Property Name="Text" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Randevu">
+          <Key>
+            <PropertyRef Name="Randevu_id" />
+          </Key>
+          <Property Name="Randevu_id" Type="int" Nullable="false" />
+          <Property Name="randevu_dabisanId" Type="nchar" MaxLength="10" />
+          <Property Name="randevu_tarih" Type="datetime" />
+          <Property Name="diyetisyenId" Type="int" />
+        </EntityType>
+        <EntityContainer Name="diyettakipsisModel1StoreContainer">
+          <EntitySet Name="Danisan" EntityType="Self.Danisan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Diyetisyen" EntityType="Self.Diyetisyen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="diyetList" EntityType="Self.diyetList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Randevu" EntityType="Self.Randevu" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="diyettakipsisModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Danisan">
+          <Key>
+            <PropertyRef Name="danisan_id" />
+          </Key>
+          <Property Name="danisan_id" Type="Int32" Nullable="false" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="DogumTarihi" Type="DateTime" Precision="3" />
+          <Property Name="Cinsiyet" Type="Boolean" />
+          <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="Boy" Type="Double" />
+          <Property Name="Kilo" Type="Double" />
+        </EntityType>
+        <EntityType Name="Diyetisyen">
+          <Key>
+            <PropertyRef Name="Diyetisyen_id" />
+          </Key>
+          <Property Name="Diyetisyen_id" Type="Int32" Nullable="false" />
+          <Property Name="diyetisyen_adSoyad" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="user_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Cinsiyet" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="diyetList">
+          <Key>
+            <PropertyRef Name="diyetListId" />
+          </Key>
+          <Property Name="diyetListId" Type="Int32" Nullable="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Randevu">
+          <Key>
+            <PropertyRef Name="Randevu_id" />
+          </Key>
+          <Property Name="Randevu_id" Type="Int32" Nullable="false" />
+          <Property Name="randevu_dabisanId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="randevu_tarih" Type="DateTime" Precision="3" />
+          <Property Name="diyetisyenId" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Danisans" EntityType="Self.Danisan" />
+          <EntitySet Name="Diyetisyens" EntityType="Self.Diyetisyen" />
+          <EntitySet Name="diyetLists" EntityType="Self.diyetList" />
+          <EntitySet Name="Randevus" EntityType="Self.Randevu" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="diyettakipsisModel1StoreContainer" CdmEntityContainer="TestEntities">
+          <EntitySetMapping Name="Danisans">
+            <EntityTypeMapping TypeName="diyettakipsisModel1.Danisan">
+              <MappingFragment StoreEntitySet="Danisan">
+                <ScalarProperty Name="danisan_id" ColumnName="danisan_id" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+                <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Boy" ColumnName="Boy" />
+                <ScalarProperty Name="Kilo" ColumnName="Kilo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diyetisyens">
+            <EntityTypeMapping TypeName="diyettakipsisModel1.Diyetisyen">
+              <MappingFragment StoreEntitySet="Diyetisyen">
+                <ScalarProperty Name="Diyetisyen_id" ColumnName="Diyetisyen_id" />
+                <ScalarProperty Name="diyetisyen_adSoyad" ColumnName="diyetisyen_adSoyad" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="diyetLists">
+            <EntityTypeMapping TypeName="diyettakipsisModel1.diyetList">
+              <MappingFragment StoreEntitySet="diyetList">
+                <ScalarProperty Name="diyetListId" ColumnName="diyetListId" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Randevus">
+            <EntityTypeMapping TypeName="diyettakipsisModel1.Randevu">
+              <MappingFragment StoreEntitySet="Randevu">
+                <ScalarProperty Name="Randevu_id" ColumnName="Randevu_id" />
+                <ScalarProperty Name="randevu_dabisanId" ColumnName="randevu_dabisanId" />
+                <ScalarProperty Name="randevu_tarih" ColumnName="randevu_tarih" />
+                <ScalarProperty Name="diyetisyenId" ColumnName="diyetisyenId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

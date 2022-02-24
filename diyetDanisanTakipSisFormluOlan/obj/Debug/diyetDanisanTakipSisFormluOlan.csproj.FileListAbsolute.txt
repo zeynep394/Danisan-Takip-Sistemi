@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\bin\Debug\Database1.mdf
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\bin\Debug\Database1_log.ldf
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\bin\Debug\diyetDanisanTakipSisFormluOlan.exe.config
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\bin\Debug\diyetDanisanTakipSisFormluOlan.exe
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\bin\Debug\diyetDanisanTakipSisFormluOlan.pdb
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\obj\Debug\diyetDanisanTakipSisFormluOlan.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\obj\Debug\diyetDanisanTakipSisFormluOlan.Form1.resources
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\obj\Debug\diyetDanisanTakipSisFormluOlan.Forms.FormAnaSayfa.resources
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\obj\Debug\diyetDanisanTakipSisFormluOlan.Properties.Resources.resources
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\obj\Debug\diyetDanisanTakipSisFormluOlan.csproj.GenerateResource.cache
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\obj\Debug\diyetDanisanTakipSisFormluOlan.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\obj\Debug\diyetDanisanTakipSisFormluOlan.exe
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\obj\Debug\diyetDanisanTakipSisFormluOlan.pdb
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\diyetDanisanTakipSisFormluOlan\diyetDanisanTakipSisFormluOlan\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="diyettakipsisModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Danisan">
+    <Key>
+      <PropertyRef Name="danisan_id" />
+    </Key>
+    <Property Name="danisan_id" Type="Int32" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Cinsiyet" Type="Boolean" />
+    <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="Boy" Type="Double" />
+    <Property Name="Kilo" Type="Double" />
+  </EntityType>
+  <EntityType Name="Diyetisyen">
+    <Key>
+      <PropertyRef Name="Diyetisyen_id" />
+    </Key>
+    <Property Name="Diyetisyen_id" Type="Int32" Nullable="false" />
+    <Property Name="diyetisyen_adSoyad" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Cinsiyet" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="diyetList">
+    <Key>
+      <PropertyRef Name="diyetListId" />
+    </Key>
+    <Property Name="diyetListId" Type="Int32" Nullable="false" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Randevu">
+    <Key>
+      <PropertyRef Name="Randevu_id" />
+    </Key>
+    <Property Name="Randevu_id" Type="Int32" Nullable="false" />
+    <Property Name="randevu_dabisanId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="randevu_tarih" Type="DateTime" Precision="3" />
+    <Property Name="diyetisyenId" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Danisans" EntityType="Self.Danisan" />
+    <EntitySet Name="Diyetisyens" EntityType="Self.Diyetisyen" />
+    <EntitySet Name="diyetLists" EntityType="Self.diyetList" />
+    <EntitySet Name="Randevus" EntityType="Self.Randevu" />
+  </EntityContainer>
+</Schema>
